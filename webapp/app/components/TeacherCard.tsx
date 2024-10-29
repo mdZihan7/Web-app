@@ -2,6 +2,7 @@
 
 import React from 'react'
 import styles from './TeacherCard.module.css'
+import Image from "next/image";
 
 interface TeacherCardProps {
     name: string;
@@ -12,12 +13,14 @@ interface TeacherCardProps {
 
 const TeacherCard: React.FC<TeacherCardProps> = ({ name, subject, imgSrc }) => {
     return (
+        
         <div className={styles.card}>
-            <h3>{name}</h3>
-            <p>{subject}</p>
-            <img src={imgSrc} alt={`${name}'s picture`} width={100} height={100} />
+            <h3>Teacher: {name}</h3>
+            <p>Subject: {subject}</p>
+            <Image src={imgSrc} alt={''} width={100} height={100} />
             <button className={styles.button}>Book a Class</button>
         </div>
+        
     );
 };
 
