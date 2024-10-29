@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import TeacherCard from "./components/TeacherCard";
 import styles from './components/TeacherCard.module.css'
 
